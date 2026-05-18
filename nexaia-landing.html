@@ -187,7 +187,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px 5%}
       <li><a href="#como-funciona">Cómo funciona</a></li>
       <li><a href="#por-que">Por qué Nexaia</a></li>
     </ul>
-    <a href="#contacto" class="nav-cta">Diagnóstico Gratis</a>
+    <a href="#" onclick="document.getElementById('modal').style.display='flex';return false;" class="nav-cta">Diagnóstico Gratis</a>
   </div>
 </nav>
 
@@ -201,7 +201,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px 5%}
         Soluciones de IA para empresas
       </div>
       <h1>Automatizamos<br>lo que frena<br><span>tu crecimiento.</span></h1>
-      <p>Diseñamos automatizaciones de procesos, paneles inteligentes y sistemas a medida para que tu empresa opere más rápido, con menos errores y más resultados.</p>
+      <p>Diseñamos automatizaciones de procesos, paneles inteligentes y sistemas a medida para que las empresas operen más rápido, con menos errores y más resultados.</p>
       <div class="hero-actions">
         <a href="https://wa.me/543815867331" class="btn-primary" target="_blank">
           <svg class="btn-wsp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -209,7 +209,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px 5%}
           </svg>
           Hablar por WhatsApp
         </a>
-        <a href="#contacto" class="btn-secondary">
+        <a href="#" onclick="document.getElementById('modal').style.display='flex';return false;" class="btn-secondary">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg> Solicitar diagnóstico gratis
         </a>
       </div>
@@ -425,6 +425,74 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px 5%}
     </div>
   </div>
 </footer>
+
+
+<!-- MODAL FORM -->
+<div id="modal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:1000;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px">
+  <div style="background:#0e1320;border:1px solid rgba(14,165,233,0.25);border-radius:20px;padding:48px 40px;width:100%;max-width:480px;position:relative">
+    <button onclick="document.getElementById('modal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;color:#7a8fa8;font-size:22px;cursor:pointer;line-height:1">✕</button>
+    <div style="font-size:13px;font-weight:600;color:#0ea5e9;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px">Diagnóstico gratuito</div>
+    <h3 style="font-family:'Outfit',sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px">Contanos sobre tu empresa</h3>
+    <p style="font-size:14px;color:#7a8fa8;margin-bottom:32px;line-height:1.7">En menos de 48hs te decimos exactamente cómo podemos ayudarte.</p>
+    
+    <form id="diagForm" action="https://formspree.io/f/xwvyazvy" method="POST" style="display:flex;flex-direction:column;gap:16px">
+      <div>
+        <label style="font-size:13px;font-weight:500;color:#7a8fa8;display:block;margin-bottom:6px">Nombre completo *</label>
+        <input type="text" name="nombre" required placeholder="Gabriel Eleas" style="width:100%;background:#111622;border:1px solid rgba(14,165,233,0.2);border-radius:10px;padding:12px 16px;color:#eef2f7;font-size:15px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(14,165,233,0.6)'" onblur="this.style.borderColor='rgba(14,165,233,0.2)'">
+      </div>
+      <div>
+        <label style="font-size:13px;font-weight:500;color:#7a8fa8;display:block;margin-bottom:6px">Email *</label>
+        <input type="email" name="email" required placeholder="gabriel@empresa.com" style="width:100%;background:#111622;border:1px solid rgba(14,165,233,0.2);border-radius:10px;padding:12px 16px;color:#eef2f7;font-size:15px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(14,165,233,0.6)'" onblur="this.style.borderColor='rgba(14,165,233,0.2)'">
+      </div>
+      <div>
+        <label style="font-size:13px;font-weight:500;color:#7a8fa8;display:block;margin-bottom:6px">Teléfono *</label>
+        <input type="tel" name="telefono" required placeholder="+54 381 000 0000" style="width:100%;background:#111622;border:1px solid rgba(14,165,233,0.2);border-radius:10px;padding:12px 16px;color:#eef2f7;font-size:15px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(14,165,233,0.6)'" onblur="this.style.borderColor='rgba(14,165,233,0.2)'">
+      </div>
+      <div>
+        <label style="font-size:13px;font-weight:500;color:#7a8fa8;display:block;margin-bottom:6px">Empresa</label>
+        <input type="text" name="empresa" placeholder="Nombre de tu empresa (opcional)" style="width:100%;background:#111622;border:1px solid rgba(14,165,233,0.2);border-radius:10px;padding:12px 16px;color:#eef2f7;font-size:15px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(14,165,233,0.6)'" onblur="this.style.borderColor='rgba(14,165,233,0.2)'">
+      </div>
+      <div>
+        <label style="font-size:13px;font-weight:500;color:#7a8fa8;display:block;margin-bottom:6px">¿En qué podemos ayudarte?</label>
+        <textarea name="mensaje" rows="3" placeholder="Contanos brevemente qué procesos querés mejorar..." style="width:100%;background:#111622;border:1px solid rgba(14,165,233,0.2);border-radius:10px;padding:12px 16px;color:#eef2f7;font-size:15px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s;resize:vertical" onfocus="this.style.borderColor='rgba(14,165,233,0.6)'" onblur="this.style.borderColor='rgba(14,165,233,0.2)'"></textarea>
+      </div>
+      <button type="submit" style="background:#0ea5e9;color:#fff;border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:background .2s;margin-top:4px" onmouseover="this.style.background='#38bdf8'" onmouseout="this.style.background='#0ea5e9'">
+        Solicitar diagnóstico gratis
+      </button>
+      <p style="font-size:12px;color:#7a8fa8;text-align:center">100% gratuito · Sin compromiso · Respondemos en 24hs</p>
+    </form>
+
+    <div id="formSuccess" style="display:none;text-align:center;padding:20px 0">
+      <div style="font-size:48px;margin-bottom:16px">✅</div>
+      <h3 style="font-family:'Outfit',sans-serif;font-size:22px;font-weight:800;margin-bottom:8px">¡Mensaje enviado!</h3>
+      <p style="color:#7a8fa8;font-size:15px">Te contactamos en menos de 24hs. ¡Gracias!</p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('diagForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }
+  } catch(err) {
+    alert('Hubo un error. Por favor intentá de nuevo.');
+  }
+});
+document.getElementById('modal').addEventListener('click', function(e) {
+  if (e.target === this) this.style.display = 'none';
+});
+</script>
 
 </body>
 </html>
