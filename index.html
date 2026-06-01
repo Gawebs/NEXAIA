@@ -12,6 +12,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://nxaia.com/og-banner01.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -195,7 +196,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px 5%}
       <li><a href="#como-funciona">Cómo funciona</a></li>
       <li><a href="#por-que">Por qué Nexaia</a></li>
     </ul>
-    <a href="#" onclick="document.getElementById('modal').style.display='flex';return false;" class="nav-cta">Diagnóstico Gratis</a>
+    <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/admin-nxaia/30min'});return false;" class="nav-cta">Diagnóstico Gratis</a>
   </div>
 </nav>
 
@@ -217,7 +218,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px 5%}
           </svg>
           Hablar por WhatsApp
         </a>
-        <a href="#" onclick="document.getElementById('modal').style.display='flex';return false;" class="btn-secondary">
+        <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/admin-nxaia/30min'});return false;" class="btn-secondary">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg> Solicitar diagnóstico gratis
         </a>
       </div>
@@ -543,5 +544,6 @@ document.getElementById('modal').addEventListener('click', function(e) {
 })();
 </script>
 
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </body>
 </html>
