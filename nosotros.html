@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="favicon.png">
 <title>Nosotros | Quiénes somos — NEXAIA</title>
 <meta name="description" content="Somos Gabriel y Pao, el equipo detrás de Nexaia. Desarrollamos sistemas digitales únicos para empresas de Tucumán y toda Argentina.">
 <meta name="robots" content="index, follow">
@@ -36,13 +37,15 @@ h1 span{color:var(--accent2)}
 .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:80px}
 .team-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px;position:relative;overflow:hidden}
 .team-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--green))}
-.team-avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--green));display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:900;font-size:28px;color:#fff;margin-bottom:20px}
+.team-avatar{width:120px;height:120px;border-radius:50%;overflow:hidden;margin-bottom:20px;border:3px solid var(--border2)}
+.team-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
 .team-name{font-family:'Outfit',sans-serif;font-size:24px;font-weight:800;margin-bottom:4px}
 .team-role{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:20px}
 .team-bio{font-size:15px;color:var(--muted);line-height:1.75}
 .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
 .value-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px}
-.value-icon{font-size:28px;margin-bottom:16px}
+.value-icon{width:48px;height:48px;border-radius:12px;background:rgba(14,165,233,0.1);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.value-icon svg{stroke:var(--accent2);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .value-title{font-family:'Outfit',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px}
 .value-desc{font-size:14px;color:var(--muted);line-height:1.7}
 h2{font-family:'Outfit',sans-serif;font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-1px;margin-bottom:16px}
@@ -80,7 +83,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px 5%}
   <div class="page-hero-inner">
     <div class="section-label">El equipo</div>
     <h1>Somos Nexaia.<br><span>Tecnología con propósito.</span></h1>
-    <p class="lead">Desarrollamos sistemas digitales únicos para empresas de Tucumán y toda Argentina. No vendemos software de estante. Construimos la solución exacta para tu problema específico.</p>
+    <p class="lead">Desarrollamos sistemas digitales únicos para empresas. Construimos la solución exacta para problemas específicos.</p>
   </div>
 </div>
 
@@ -89,13 +92,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px 5%}
 
     <div class="team-grid">
       <div class="team-card">
-        <div class="team-avatar">G</div>
+        <div class="team-avatar"><img src="gabriel.jpg" alt="Gabriel"></div>
         <div class="team-name">Gabriel</div>
         <div class="team-role">Fundador & Desarrollador</div>
         <p class="team-bio">Especialista en automatización de procesos, integraciones entre sistemas y desarrollo de software a medida. Trabaja codo a codo con cada cliente para entender el problema de raíz antes de escribir una sola línea de código. Con base en Tucumán, trabaja con empresas de toda Argentina.</p>
       </div>
       <div class="team-card">
-        <div class="team-avatar">P</div>
+        <div class="team-avatar"><img src="pao.jpg" alt="Pao"></div>
         <div class="team-name">Pao</div>
         <div class="team-role">Co-fundadora & Consultoría</div>
         <p class="team-bio">A cargo de la consultoría estratégica y el vínculo con los clientes. Se asegura de que cada solución esté alineada con los objetivos reales del negocio y que el equipo del cliente pueda adoptarla sin fricciones. Referente en procesos internos y capacitación en IA.</p>
@@ -108,25 +111,26 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px 5%}
     </div>
     <div class="values-grid">
       <div class="value-card">
-        <div class="value-icon">🎯</div>
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
         <div class="value-title">Primero el problema</div>
-        <p class="value-desc">No llegamos con una solución predefinida. Primero entendemos a fondo qué está fallando en tu operación y por qué.</p>
+        <p class="value-desc">Cada solución es única. Primero entendemos a fondo qué está fallando en tu operación y por qué.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">⚡</div>
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <div class="value-title">Resultados rápidos</div>
-        <p class="value-desc">Trabajamos en ciclos cortos con impacto visible. No proyectos de 6 meses antes de ver algo funcionar.</p>
+        <p class="value-desc">Trabajamos en ciclos cortos con impacto visible. Esto nos permite efectividad a corto plazo.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">🤝</div>
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <div class="value-title">Socios, no proveedores</div>
-        <p class="value-desc">Seguimos con vos después de la implementación. Tu éxito es nuestro éxito a largo plazo.</p>
+        <p class="value-desc">Acompañamiento para una efectiva implementación. Tu éxito es nuestro éxito a largo plazo.</p>
       </div>
     </div>
 
+
     <div class="cta-band">
       <h2>¿Querés conocernos mejor?</h2>
-      <p>Agendá una reunión de diagnóstico gratuita. Sin compromiso, sin vueltas.</p>
+      <p>Agendá una reunión de diagnóstico gratuita.</p>
       <a href="index.html#contacto" class="btn-primary">Hablar con el equipo →</a>
     </div>
 
